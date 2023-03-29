@@ -21,7 +21,7 @@ APIResponse _$APIResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$APIResponse {
   dynamic get data => throw _privateConstructorUsedError;
-  Result? get esito => throw _privateConstructorUsedError;
+  Map<String, Result?>? get esito => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,9 +35,7 @@ abstract class $APIResponseCopyWith<$Res> {
           APIResponse value, $Res Function(APIResponse) then) =
       _$APIResponseCopyWithImpl<$Res, APIResponse>;
   @useResult
-  $Res call({dynamic data, Result? esito});
-
-  $ResultCopyWith<$Res>? get esito;
+  $Res call({dynamic data, Map<String, Result?>? esito});
 }
 
 /// @nodoc
@@ -64,20 +62,8 @@ class _$APIResponseCopyWithImpl<$Res, $Val extends APIResponse>
       esito: freezed == esito
           ? _value.esito
           : esito // ignore: cast_nullable_to_non_nullable
-              as Result?,
+              as Map<String, Result?>?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ResultCopyWith<$Res>? get esito {
-    if (_value.esito == null) {
-      return null;
-    }
-
-    return $ResultCopyWith<$Res>(_value.esito!, (value) {
-      return _then(_value.copyWith(esito: value) as $Val);
-    });
   }
 }
 
@@ -89,10 +75,7 @@ abstract class _$$_APIResponseCopyWith<$Res>
       __$$_APIResponseCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({dynamic data, Result? esito});
-
-  @override
-  $ResultCopyWith<$Res>? get esito;
+  $Res call({dynamic data, Map<String, Result?>? esito});
 }
 
 /// @nodoc
@@ -115,9 +98,9 @@ class __$$_APIResponseCopyWithImpl<$Res>
           : data // ignore: cast_nullable_to_non_nullable
               as dynamic,
       esito: freezed == esito
-          ? _value.esito
+          ? _value._esito
           : esito // ignore: cast_nullable_to_non_nullable
-              as Result?,
+              as Map<String, Result?>?,
     ));
   }
 }
@@ -125,15 +108,23 @@ class __$$_APIResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_APIResponse implements _APIResponse {
-  const _$_APIResponse({this.data, this.esito});
+  const _$_APIResponse({this.data, final Map<String, Result?>? esito})
+      : _esito = esito;
 
   factory _$_APIResponse.fromJson(Map<String, dynamic> json) =>
       _$$_APIResponseFromJson(json);
 
   @override
   final dynamic data;
+  final Map<String, Result?>? _esito;
   @override
-  final Result? esito;
+  Map<String, Result?>? get esito {
+    final value = _esito;
+    if (value == null) return null;
+    if (_esito is EqualUnmodifiableMapView) return _esito;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
 
   @override
   String toString() {
@@ -146,13 +137,15 @@ class _$_APIResponse implements _APIResponse {
         (other.runtimeType == runtimeType &&
             other is _$_APIResponse &&
             const DeepCollectionEquality().equals(other.data, data) &&
-            (identical(other.esito, esito) || other.esito == esito));
+            const DeepCollectionEquality().equals(other._esito, _esito));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(data), esito);
+      runtimeType,
+      const DeepCollectionEquality().hash(data),
+      const DeepCollectionEquality().hash(_esito));
 
   @JsonKey(ignore: true)
   @override
@@ -169,8 +162,8 @@ class _$_APIResponse implements _APIResponse {
 }
 
 abstract class _APIResponse implements APIResponse {
-  const factory _APIResponse({final dynamic data, final Result? esito}) =
-      _$_APIResponse;
+  const factory _APIResponse(
+      {final dynamic data, final Map<String, Result?>? esito}) = _$_APIResponse;
 
   factory _APIResponse.fromJson(Map<String, dynamic> json) =
       _$_APIResponse.fromJson;
@@ -178,7 +171,7 @@ abstract class _APIResponse implements APIResponse {
   @override
   dynamic get data;
   @override
-  Result? get esito;
+  Map<String, Result?>? get esito;
   @override
   @JsonKey(ignore: true)
   _$$_APIResponseCopyWith<_$_APIResponse> get copyWith =>

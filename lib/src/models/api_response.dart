@@ -8,7 +8,7 @@ part 'api_response.g.dart';
 class APIResponse with _$APIResponse {
   const factory APIResponse({
     dynamic data,
-    Result? esito,
+    Map<String, Result?>? esito,
   }) = _APIResponse;
 
   factory APIResponse.fromJson(Map<String, dynamic> json) =>
