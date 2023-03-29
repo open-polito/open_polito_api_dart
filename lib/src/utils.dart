@@ -1,23 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-
-class Result {
-  int stato;
-  String? error;
-
-  Result({required this.stato, this.error});
-}
-
-class APIResponse {
-  dynamic data;
-  Result esito;
-
-  APIResponse({
-    required this.data,
-    required this.esito,
-  });
-}
+import 'package:open_polito_api/src/models/api_response.dart';
 
 /// Makes a POST request to an API endpoint.
 /// The [baseUrl] is the API domain, with a trailing slash.
@@ -37,7 +21,6 @@ Future<APIResponse> post(
 
   var decoded = json.decode(response.body);
 
-  return APIResponse(
-    data: decoded["data"],
-  );
+  // return APIResponse(
+  //     data: decoded["data"], esito: Result(stato: decoded["stato"]));
 }
