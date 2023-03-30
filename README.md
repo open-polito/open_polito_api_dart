@@ -18,7 +18,7 @@ Features to port from the original code:
 - [ ] exam_sessions
 - [ ] material
 - [ ] notifications
-- [ ] tickets
+- [x] tickets
 - [ ] timetable
 - [x] user
 - [x] utils

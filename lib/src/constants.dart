@@ -6,3 +6,4 @@ const logoutRoute = "logout.php";
 const mailRoute = "mail.php";
 const pingRoute = "ping.php";
 const registerRoute = "register.php";
+const ticketRoute = "ticket.php";
