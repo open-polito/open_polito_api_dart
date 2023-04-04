@@ -1,6 +1,7 @@
 const defaultBaseUrl = "https://app.didattica.polito.it/";
 
 const downloadRoute = "download.php";
+const examsRoute = "esami.php";
 const extendedCourseInfoRoute = "materia_dettaglio.php";
 const gotoVirtualClassroomRoute = "goto_virtualclassroom.php";
 const gotoWebmailRoute = "goto_webmail.php";
