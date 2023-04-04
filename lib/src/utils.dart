@@ -57,7 +57,7 @@ class UpstreamException implements Exception {
   final String? message;
   final int? code;
 
-  UpstreamException(this.message, this.code);
+  const UpstreamException(this.message, this.code);
 
   @override
   String toString() {

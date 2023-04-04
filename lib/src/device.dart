@@ -30,7 +30,7 @@ class Entry {
   final Map<String, dynamic> request;
   final Map<String, dynamic> response;
 
-  Entry({
+  const Entry({
     required this.endpoint,
     required this.request,
     required this.response,
@@ -51,7 +51,7 @@ class LoginResult {
   final PersonalData data;
   final String token;
 
-  LoginResult({
+  const LoginResult({
     required this.data,
     required this.token,
   });

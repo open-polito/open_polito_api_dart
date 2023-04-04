@@ -4,25 +4,25 @@ import 'package:open_polito_api/src/utils.dart';
 
 /// A support ticket.
 class Ticket {
-  int? id;
-  String? title;
+  final int? id;
+  final String? title;
 
   /// The HTML text of the first message
-  String? description;
+  final String? description;
 
   /// The date when this ticket was opened, as Unix epoch
-  int? creationDate;
+  final int? creationDate;
 
   /// The date when this ticket was last updated, as Unix epoch
-  int? lastUpdated;
+  final int? lastUpdated;
 
   /// A number representing the state of the ticket. 1 = open, 2 = closed
-  int? state;
+  final int? state;
 
   /// The number of unread messages in the ticket thread
-  int? unread;
+  final int? unread;
 
-  Ticket({
+  const Ticket({
     this.id,
     this.title,
     this.description,

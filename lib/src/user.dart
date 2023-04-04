@@ -19,7 +19,7 @@ class PersonalData {
   /// Example: "INGEGNERIA INFORMATICA"
   final String? degreeName;
 
-  PersonalData({
+  const PersonalData({
     this.currentId,
     this.ids,
     this.name,
@@ -33,7 +33,7 @@ class UnreadMailResult {
   final int total;
   final String unread;
 
-  UnreadMailResult({
+  const UnreadMailResult({
     required this.total,
     required this.unread,
   });

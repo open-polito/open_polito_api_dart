@@ -2,6 +2,7 @@ import 'package:open_polito_api/src/course.dart';
 import 'package:open_polito_api/src/courses.dart';
 import 'package:open_polito_api/src/device.dart';
 import 'package:open_polito_api/src/material.dart';
+import 'package:open_polito_api/src/tickets.dart';
 import 'package:open_polito_api/src/utils.dart';
 import 'package:open_polito_api/src/user.dart';
 
@@ -28,7 +29,13 @@ void main() async {
   print(await getDownloadURL(device, code: "33278489"));
   // TODO final bookings = await getBookings(device);
 
-  // TODO slots, tickets, ticket
+  // TODO booking slots
+
+  final tickets = await getTickets(device);
+  print("Tickets: $tickets");
+  if (tickets.isNotEmpty) {
+    print("Ticket: ${await getTicket(device, tickets[0].id!)}");
+  }
 
   await device.logout();
 }
