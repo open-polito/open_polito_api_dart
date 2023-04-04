@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
 import 'package:open_polito_api/src/constants.dart';
 import 'package:open_polito_api/src/models/api_response.dart';
 import 'package:uuid/uuid.dart';
@@ -36,6 +37,7 @@ Future<void> ping([baseUrl = defaultBaseUrl]) async {
 
 /// Checks if the API response contains an error, and throws it.
 void checkError(APIResponse data) {
+  // print(data.data);
   if (data.esito == null) {
     throw UpstreamException("No \"esito\" field", null);
   }
@@ -66,4 +68,14 @@ class UpstreamException implements Exception {
 /// Generates a UUID v4.
 String createUuidV4() {
   return Uuid().v4();
+}
+
+/// Parse a date string in the [format] format into a [DateTime].
+DateTime? parseDate(String dateString, String formatString) {
+  final dateFormat = DateFormat(formatString);
+  try {
+    return dateFormat.parse(dateString);
+  } catch (e) {
+    return null;
+  }
 }

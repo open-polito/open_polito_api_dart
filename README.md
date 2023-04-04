@@ -11,12 +11,12 @@ This library uses `freezed` and `json_serializable` for code generation. Run `da
 Features to port from the original code:
 
 - [ ] booking
-- [ ] course
-- [ ] courses
+- [x] course
+- [x] courses
 - [x] device
-- [ ] example
+- [x] example
 - [ ] exam_sessions
-- [ ] material
+- [x] material
 - [ ] notifications
 - [x] tickets
 - [ ] timetable
