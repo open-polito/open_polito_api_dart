@@ -1,5 +1,6 @@
 const defaultBaseUrl = "https://app.didattica.polito.it/";
 
+const bookingsRoute = "booking_api.php";
 const downloadRoute = "download.php";
 const examsRoute = "esami.php";
 const extendedCourseInfoRoute = "materia_dettaglio.php";
@@ -9,7 +10,11 @@ const loginRoute = "login.php";
 const logoutRoute = "logout.php";
 const mailRoute = "mail.php";
 const marksRoute = "valutazioni.php";
+const notificationsRoute = "messaggi.php";
 const pingRoute = "ping.php";
+const registerNotificationsRoute = "rid.php";
 const registerRoute = "register.php";
 const studentRoute = "studente.php";
+const testNotificationRoute = "testnotifica.php";
 const ticketRoute = "ticket.php";
+const timetableRoute = "orari_lezioni.php";

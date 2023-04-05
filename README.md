@@ -10,16 +10,16 @@ This library uses `freezed` and `json_serializable` for code generation. Run `da
 
 Features to port from the original code:
 
-- [ ] booking
+- [x] booking
 - [x] course
 - [x] courses
 - [x] device
 - [x] example
-- [ ] exam_sessions
+- [x] exam_sessions
 - [x] material
-- [ ] notifications
+- [x] notifications
 - [x] tickets
-- [ ] timetable
+- [x] timetable
 - [x] user
 - [x] utils
 

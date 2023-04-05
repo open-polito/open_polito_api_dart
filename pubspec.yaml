@@ -1,7 +1,7 @@
 name: open_polito_api
-description: A starting point for Dart libraries or applications.
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+description: An open source, unofficial API for Politecnico di Torino.
+version: 1.1.6
+repository: https://github.com/open-polito/open_polito_api_dart
 
 environment:
   sdk: ">=2.19.5 <3.0.0"
