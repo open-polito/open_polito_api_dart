@@ -60,19 +60,19 @@ class LoginResult {
 /// A class with credentials for accessing the upstream API
 class Device {
   /// A unique identifier for the device
-  final String uuid;
+  String uuid;
 
   /// A token for authorizing the user
   String? token;
 
   /// The request timeout in milliseconds
-  final int timeout;
+  int timeout;
 
   /// A callback for network requests
-  final RequestLogger requestLogger;
+  RequestLogger requestLogger;
 
   /// The base URL for the API
-  final String baseUrl;
+  String baseUrl;
 
   /// The device version (required for notifications)
   String? version;
